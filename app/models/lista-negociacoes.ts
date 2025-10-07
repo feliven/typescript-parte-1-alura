@@ -7,7 +7,7 @@ export default class listaNegociacoes {
     this.listaNegociacoes.push(negociacao);
   }
 
-  listarNegociacoes(): ReadonlyArray<Negociacao> {
+  listarNegociacoes(): readonly Negociacao[] {
     return this.listaNegociacoes;
     // "..." é o Spread Operator: ele pega cada item desse array individualmente e coloca em uma nova lista
   }

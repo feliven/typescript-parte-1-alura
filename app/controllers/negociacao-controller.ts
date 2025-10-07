@@ -39,7 +39,7 @@ export default class NegociacaoController {
     console.log(negociacao);
 
     this.listaNegociacoes.adicionarNaListaNegociacoes(negociacao);
-    this.listaNegociacoes.listarNegociacoes().pop();
+    // this.listaNegociacoes.listarNegociacoes().pop();
     console.log(this.listaNegociacoes);
 
     this.limparFormulario();

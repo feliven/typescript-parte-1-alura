@@ -9,19 +9,19 @@ export default class Negociacao {
     this.valor = valor;
   }
 
-  getData() {
+  getData(): Date {
     return this.data;
   }
 
-  getQuantidade() {
+  getQuantidade(): number {
     return this.quantidade;
   }
 
-  getValor() {
+  getValor(): number {
     return this.valor;
   }
 
-  getVolume() {
+  getVolume(): number {
     return this.quantidade * this.valor;
   }
 }

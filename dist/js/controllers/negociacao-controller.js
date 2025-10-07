@@ -8,7 +8,7 @@ export default class NegociacaoController {
         this.inputQuantidade = document.getElementById("quantidade");
         this.inputValor = document.getElementById("valor");
     }
-    adicionar() {
+    criarNegociacao() {
         const dataString = this.inputData.value;
         const timestamp = Date.parse(dataString + " 00:00:00"); // corrige bug de data no JS
         const data = new Date(timestamp);
@@ -16,7 +16,10 @@ export default class NegociacaoController {
         const quantidade = +quantidadeString;
         const valorString = this.inputValor.value;
         const valor = +valorString;
-        const negociacao = new Negociacao(data, quantidade, valor);
+        return new Negociacao(data, quantidade, valor);
+    }
+    adicionarNegociacao() {
+        const negociacao = this.criarNegociacao();
         console.log(negociacao);
     }
 }

@@ -11,7 +11,7 @@ export default class NegociacaoController {
     this.inputValor = document.getElementById("valor") as HTMLInputElement;
   }
 
-  adicionar() {
+  criarNegociacao(): Negociacao {
     const dataString: string = this.inputData.value;
     const timestamp: number = Date.parse(dataString + " 00:00:00"); // corrige bug de data no JS
     const data: Date = new Date(timestamp);
@@ -22,7 +22,11 @@ export default class NegociacaoController {
     const valorString: string = this.inputValor.value;
     const valor: number = +valorString;
 
-    const negociacao = new Negociacao(data, quantidade, valor);
+    return new Negociacao(data, quantidade, valor);
+  }
+
+  adicionarNegociacao(): void {
+    const negociacao = this.criarNegociacao();
     console.log(negociacao);
   }
 }

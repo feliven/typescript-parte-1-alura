@@ -7,7 +7,8 @@ export default class listaNegociacoes {
     this.listaNegociacoes.push(negociacao);
   }
 
-  getListaNegociacoes(): Negociacao[] {
-    return this.listaNegociacoes;
+  listarNegociacoes(): Negociacao[] {
+    return [...this.listaNegociacoes];
+    // "..." é o Spread Operator: ele pega cada item desse array individualmente e coloca em uma nova lista
   }
 }

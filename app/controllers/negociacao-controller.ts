@@ -36,6 +36,7 @@ export default class NegociacaoController {
 
   adicionarNegociacao(): void {
     const negociacao = this.criarNegociacao();
+    negociacao.getData().setDate(12);
     console.log(negociacao);
 
     this.listaNegociacoes.adicionarNaListaNegociacoes(negociacao);

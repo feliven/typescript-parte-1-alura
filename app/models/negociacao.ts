@@ -6,7 +6,9 @@ export default class Negociacao {
   }
 
   getData(): Date {
-    return this.data;
+    const getData = new Date(this.data);
+    return getData;
+    // para não poder modificar a data que está armazenada dentro da modelagem de negociação
   }
 
   getQuantidade(): number {

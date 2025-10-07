@@ -18,8 +18,15 @@ export default class NegociacaoController {
         const valor = +valorString;
         return new Negociacao(data, quantidade, valor);
     }
+    limparFormulario() {
+        this.inputData.value = "";
+        this.inputQuantidade.value = "";
+        this.inputValor.value = "";
+        this.inputData.focus();
+    }
     adicionarNegociacao() {
         const negociacao = this.criarNegociacao();
         console.log(negociacao);
+        this.limparFormulario();
     }
 }
